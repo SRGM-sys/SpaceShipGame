@@ -39,6 +39,11 @@ public class Laser extends MovingObject{
 		g2d.drawImage(texture, at, null);
 		
 	}
+
+	@Override
+    protected void Destroy() {
+        Dead = true; 
+    }
 	
 	@Override
 	public Vector2D getCenter(){

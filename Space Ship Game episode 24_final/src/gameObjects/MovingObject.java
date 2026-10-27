@@ -89,8 +89,7 @@ public abstract class MovingObject extends GameObject{
 	
 	protected void Destroy(){
 		Dead = true;
-		if(!(this instanceof Laser) && !(this instanceof PowerUp))
-			explosion.play();
+		explosion.play();
 	}
 	
 	protected Vector2D getCenter(){

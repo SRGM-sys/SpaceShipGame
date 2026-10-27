@@ -34,6 +34,11 @@ public class PowerUp extends MovingObject {
 	}
 
 	@Override
+    protected void Destroy() {
+        Dead = true; // Solo cambia su estado, sin reproducir el sonido
+    }
+
+	@Override
 	public void update(float dt) {
 		angle += 0.1;
 		duration += dt;
@@ -45,6 +50,7 @@ public class PowerUp extends MovingObject {
 		collidesWith();
 
 	}
+	
 
 	@Override
 	public void draw(Graphics g) {
