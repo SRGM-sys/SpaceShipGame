@@ -4,6 +4,7 @@ import java.awt.Graphics;
 import java.util.ArrayList;
 
 import gameObjects.Constants;
+import io.JSONScoreReader;
 import graphics.Assets;
 import ui.Action;
 import ui.Button;
@@ -52,7 +53,7 @@ public class MenuState extends State{
 				new Action() {
 					@Override
 					public void doAction() {
-						State.changeState(new ScoreState());
+						State.changeState(new ScoreState(new JSONScoreReader()));
 					}
 				}
 				));
